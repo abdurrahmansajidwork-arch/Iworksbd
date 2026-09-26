@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Syncopate:wght@400;700&family=Oswald:wght@500;600;700&family=Teko:wght@500;600;700&family=Anton&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Rubik", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syncopate", ui-sans-serif, system-ui, sans-serif;
+  --font-oswald: "Oswald", ui-sans-serif, system-ui, sans-serif;
+  --font-teko: "Teko", ui-sans-serif, system-ui, sans-serif;
+  --font-anton: "Anton", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-red: #EE3F2C;
+  --color-deep-black: #000000;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+  background-color: #111111;
+  color: white;
+}
+
+/* Custom Smooth Dark Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #070707;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 5px;
+  border: 2px solid #070707;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #EE3F2C;
+}
+
+.clip-diagonal {
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+
+.clip-diagonal-nav {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.clip-diagonal-drawer {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+
+/* Custom Geometric Glass Effects - Solid Colors, Zero Gradients, Clean Precision */
+.geometric-glass-border {
+  background: rgba(255, 255, 255, 0.14);
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
+}
+
+.geometric-glass-inner {
+  background: rgba(12, 12, 12, 0.65);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+.geometric-glass-inner-scrolled {
+  background: rgba(8, 8, 8, 0.90);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+
+.liquid-glass-drawer {
+  background: rgba(9, 9, 9, 0.95);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    -20px 0 50px rgba(0, 0, 0, 0.85),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.geometric-glass-dropdown {
+  background: rgba(12, 12, 12, 0.96);
+  backdrop-filter: blur(24px) saturate(170%);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.9));
+}
+
+.liquid-glass {
+  background: rgba(18, 18, 18, 0.70);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes marquee-left {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.animate-marquee-scroll {
+  animation: marquee-left 25s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.animate-marquee-left {
+  animation: marquee-left 40s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 40s linear infinite;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "iWorksBD",
+  "description": "Dhaka's premier hybrid and automobile service workshop specializing in computerized diagnostics, high-voltage battery repair, engine overhauls, and AC maintenance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
